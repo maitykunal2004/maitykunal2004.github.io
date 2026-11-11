@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kunal Maity | Finance Analytics and AI Workflow Automation</title>
+<meta name="description" content="Kunal Maity builds Python pipelines that turn messy finance documents into validated, audit-ready records. B.Com (Hons), University of Delhi. Projects on AP invoice exception handling and LLM-based document extraction.">
+<meta property="og:title" content="Kunal Maity | Finance Analytics and AI Workflow Automation">
+<meta property="og:description" content="Python pipelines for finance operations: invoice extraction, AP financial controls, exception handling, audit trails.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111'/><text x='50' y='68' font-size='52' font-family='system-ui,sans-serif' fill='%23fff' text-anchor='middle'>K</text></svg>">
+<style>
+  :root{
+    --bg:#ffffff; --fg:#12161c; --muted:#5b6472; --line:#e4e7ec;
+    --card:#fafbfc; --accent:#1f6feb; --tag:#eef2f7;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0d1117; --fg:#e6edf3; --muted:#9aa5b1; --line:#232b36;
+      --card:#12181f; --accent:#58a6ff; --tag:#1b2430;
+    }
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--bg); color:var(--fg);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.65; letter-spacing:-0.005em;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:800px; margin:0 auto; padding:0 24px}
+  header{padding:64px 0 8px}
+  .eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); font-weight:600}
+  h1{font-size:2.6rem; line-height:1.1; margin:10px 0 6px; letter-spacing:-.03em}
+  .role{font-size:1.15rem; color:var(--muted); margin:0 0 22px}
+  .lede{font-size:1.08rem; max-width:64ch}
+  .links{display:flex; flex-wrap:wrap; gap:10px; margin:26px 0 0}
+  .links a{
+    display:inline-flex; align-items:center; gap:7px;
+    border:1px solid var(--line); border-radius:999px;
+    padding:8px 15px; font-size:14.5px; font-weight:500; color:var(--fg); background:var(--card);
+  }
+  .links a:hover{border-color:var(--accent); text-decoration:none; color:var(--accent)}
+  section{padding:52px 0 0}
+  h2{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
+     font-weight:600; margin:0 0 22px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+  .card{border:1px solid var(--line); border-radius:14px; padding:24px; background:var(--card); margin-bottom:18px}
+  .card h3{margin:0 0 4px; font-size:1.2rem; letter-spacing:-.015em}
+  .card .sub{color:var(--muted); font-size:14.5px; margin:0 0 14px}
+  .card p{margin:0 0 12px}
+  .metrics{display:grid; grid-template-columns:repeat(auto-fit,minmax(145px,1fr)); gap:18px; margin:16px 0 18px; padding:16px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
+  .metric strong{display:block; font-size:1.35rem; letter-spacing:-.02em; line-height:1.2}
+  .metric span{font-size:12.5px; color:var(--muted)}
+  .tags{display:flex; flex-wrap:wrap; gap:7px; margin:0 0 4px}
+  .tags span{background:var(--tag); color:var(--muted); font-size:12.5px; padding:4px 10px; border-radius:6px; letter-spacing:.01em}
+  code{background:var(--tag); padding:1.5px 6px; border-radius:5px; font-size:.88em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  ul.clean{margin:0; padding-left:19px}
+  ul.clean li{margin-bottom:8px}
+  .job{display:flex; justify-content:space-between; gap:16px; align-items:baseline; flex-wrap:wrap}
+  .job h3{margin:0; font-size:1.1rem}
+  .job .when{color:var(--muted); font-size:14px; white-space:nowrap}
+  .org{color:var(--muted); font-size:14.5px; margin:2px 0 10px}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:26px}
+  .grid2 h4{margin:0 0 8px; font-size:14px; letter-spacing:.02em}
+  .grid2 ul{margin:0; padding-left:17px; color:var(--fg); font-size:15.5px}
+  .grid2 li{margin-bottom:5px}
+  footer{margin-top:56px; padding:28px 0 60px; border-top:1px solid var(--line); color:var(--muted); font-size:14px}
+  footer .row{display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap}
+  @media (max-width:600px){
+    h1{font-size:2rem} header{padding-top:44px} .grid2{grid-template-columns:1fr}
+    .metrics{gap:16px} .metric strong{font-size:1.15rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">New Delhi, India</div>
+    <h1>Kunal Maity</h1>
+    <p class="role">Finance analytics and AI workflow automation</p>
+    <p class="lede">
+      I build small, testable systems that take messy finance work off a person's plate: invoice documents
+      turned into validated records, financial controls that run on every row, and exceptions routed to a
+      review queue instead of being noticed by luck. B.Com (Hons) from the University of Delhi, with
+      hands-on exposure to high-volume accounts payable operations at JLL Business Services.
+    </p>
+    <nav class="links">
+      <a href="https://github.com/maitykunal2004">GitHub</a>
+      <a href="https://www.linkedin.com/in/kunalmaity-finance/">LinkedIn</a>
+      <a href="mailto:maitykunal2004@gmail.com">Email</a>
+      <a href="#work">Projects</a>
+    </nav>
+  </header>
+
+  <section id="work">
+    <h2>Selected work</h2>
+
+    <div class="card">
+      <h3>AP Invoice Exception and Reconciliation Pipeline</h3>
+      <p class="sub">Python, PostgreSQL, HTML dashboard. Personal project, synthetic data only.</p>
+      <p>
+        An accounts payable exception engine. It reads invoice documents written the way OCR actually
+        outputs them (<code>Rs. 13,125.00</code>, <code>GST @5% 625.00</code>, three different date formats)
+        and applies four financial controls to every record: tax rate mismatch, duplicate invoice from the
+        same vendor, missing PO reference, and invalid amount. Every failure is written to an exception log
+        with the required action, so one bad row cannot hide a second problem behind it.
+      </p>
+      <div class="metrics">
+        <div class="metric"><strong>4</strong><span>financial controls on every row</span></div>
+        <div class="metric"><strong>100%</strong><span>exception recall at 50k rows</span></div>
+        <div class="metric"><strong>13</strong><span>unit tests, CI green on 3.10 to 3.13</span></div>
+        <div class="metric"><strong>0</strong><span>third-party dependencies</span></div>
+      </div>
+      <p>
+        Outputs a reconciled batch file, an exception queue with severity and required action, an audit
+        summary by control, and a self-contained HTML control dashboard for the reviewer.
+      </p>
+      <div class="tags"><span>Python</span><span>Accounts payable</span><span>Financial controls</span><span>Audit trail</span><span>PostgreSQL</span><span>CI</span></div>
+      <p style="margin:14px 0 0"><a href="https://github.com/maitykunal2004/ai-finance-invoice-automation">View repository and run it locally</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Automated Financial Invoice Extractor</h3>
+      <p class="sub">Gemini 2.5 Flash vision, Pydantic v2, Pandas, Excel export. Personal project, synthetic data only.</p>
+      <p>
+        Document-to-data pipeline for invoice images and PDFs. Instead of fragile OCR regex, the model reads
+        the document and must return a strict typed schema: vendor, invoice number, date, line items,
+        subtotal, tax, total. The pipeline then re-does the arithmetic itself, verifying that line items sum
+        to the subtotal and subtotal plus tax equals the total, and flags any document that fails before it
+        reaches a ledger.
+      </p>
+      <div class="metrics">
+        <div class="metric"><strong>2</strong><span>independent reconciliation checks</span></div>
+        <div class="metric"><strong>1</strong><span>validated multi-sheet Excel ledger</span></div>
+        <div class="metric"><strong>PASS / FLAGGED</strong><span>status per document</span></div>
+      </div>
+      <p>
+        Built around a simple premise: an extraction pipeline in finance is only as good as its ability to
+        refuse bad data. Schema validation catches malformed output, and the arithmetic check catches
+        documents that are internally inconsistent.
+      </p>
+      <div class="tags"><span>Gemini 2.5 Flash</span><span>Pydantic</span><span>Structured output</span><span>Pandas</span><span>Human review</span></div>
+      <p style="margin:14px 0 0"><a href="https://github.com/maitykunal2004/automated-financial-invoice-extractor">View repository</a></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>How I work</h2>
+    <div class="grid2">
+      <div>
+        <h4>Technical</h4>
+        <ul>
+          <li>Python (standard library, Pandas, Pydantic)</li>
+          <li>SQL and PostgreSQL views</li>
+          <li>Excel and Power BI reporting</li>
+          <li>REST APIs and webhooks</li>
+          <li>n8n workflow automation</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Applied AI</h4>
+        <ul>
+          <li>LLM extraction with strict schemas</li>
+          <li>Prompt and output design for business data</li>
+          <li>Evaluation of model output against ground truth</li>
+          <li>Human-in-the-loop review queues</li>
+          <li>Guardrails over autonomous action</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="job">
+      <h3>Junior Analyst, Finance and Accounting</h3>
+      <span class="when">Jul 2025 - Dec 2025</span>
+    </div>
+    <p class="org">JLL Business Services</p>
+    <ul class="clean">
+      <li>Worked high-volume invoice batches through batch uploads and record updates in Corrigo PDS and SharePoint for enterprise accounts.</li>
+      <li>Supported reconciliation between work orders and ERP records, checked statements line by line, and tracked aging items in spreadsheets.</li>
+      <li>The recurring failures in that work, wrong tax rates, duplicate submissions, missing POs, zero-value rows, became the four controls in the AP pipeline project above.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="job">
+      <h3>B.Com (Hons)</h3>
+      <span class="when">2022 - 2025</span>
+    </div>
+    <p class="org">Dyal Singh College, University of Delhi. First division, CGPA 7.697.</p>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div>
+        <a href="mailto:maitykunal2004@gmail.com">maitykunal2004@gmail.com</a> &nbsp;·&nbsp;
+        <a href="https://github.com/maitykunal2004">github.com/maitykunal2004</a> &nbsp;·&nbsp;
+        <a href="https://www.linkedin.com/in/kunalmaity-finance/">LinkedIn</a>
+      </div>
+      <div>All project data is synthetic. No employer or client data appears in any repository.</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
